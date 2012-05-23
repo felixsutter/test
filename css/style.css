@@ -306,7 +306,27 @@ td {
 /* ==|== primary styles =====================================================
    Author: @mira
    ========================================================================== */
-/* test */
+#header, #main-content {
+  width: 80%;
+  height: auto;
+  background: #454; }
+  #header h1, #main-content h1 {
+    margin: 10px 15px;
+    font-size: auto, 80%;
+    font-family: serif; }
+  #header p, #main-content p {
+    margin: 10px 15px;
+    color: #888;
+    font-size: auto, 50%; }
+    #header p:first-of-type, #main-content p:first-of-type {
+      color: #eee; }
+    #header p a, #main-content p a {
+      color: red;
+      font-decoration: none; }
+      #header p a.extern, #main-content p a.extern {
+        font-decoration: underline;
+        color: grey; }
+
 /* ==|== media queries ======================================================
    EXAMPLE Media Query for Responsive Design.
    This example overrides the primary ('mobile first') styles
@@ -314,11 +334,6 @@ td {
    ========================================================================== */
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */ }
-#header {
-  width: 500px;
-  height: 30px;
-  background: #343; }
-
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
 

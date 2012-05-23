@@ -217,8 +217,43 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
    Author: @mira
    ========================================================================== */
-/* test */
 
+@mixin abstand {
+  margin: 10px 15px;
+}
+
+$hheight: auto;
+
+#header {
+  width: 80%;
+  height: $hheight;
+  background: #454;
+  h1 {
+    @include abstand;
+    font: {
+      size: ($hheight, 80%);
+      family: serif;
+    }
+  }
+
+  p { 
+    &:first-of-type{color: #eee;};
+    @include abstand;
+    color: #888;
+    font-size: ($hheight, 50%); 
+    a { 
+        color: red; 
+        font-decoration: none; 
+      &.extern { 
+        font-decoration: underline;
+        color: grey; }
+    }
+  }
+}
+
+#main-content {
+  @extend #header;
+}
 
 
 
@@ -243,13 +278,6 @@ td { vertical-align: top; }
 }
 
 
-
-
-#header {
-  width: 500px;
-  height: 30px;
-  background: #343;
-}
 
 
 
