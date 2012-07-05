@@ -43,6 +43,127 @@
   <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est <a href="#">Lorem ipsum</a> dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut <a href="#" class="extern"> labore</a> et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
   <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est <a href="#">Lorem ipsum</a> dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut <a href="#" class="extern"> labore</a> et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
 </div>
+<div id="verticalmenu">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Latest News</a>
+      <ul>
+        <li><a href="#">Today</a></li>
+        <li><a href="#">Yesterday</a></li>
+        <li><a href="#">This Week</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Products</a>
+      <ul>
+        <li><a href="#">Wordpress Templates</a></li>
+        <li><a href="#">Joomla Templates</a></li>
+        <li><a href="#">Drupal Templates</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Services</a>
+      <ul>
+        <li><a href="#">Web Design</a></li>
+        <li><a href="#">Flash Advertising</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+</div>
+
+
+<ul class="accordion">
+ 
+    <li id="one" class="files">
+ 
+        <a href="#one">My Files</a>
+ 
+        <ul class="sub-menu">
+ 
+            <li><a href="#">Sub Menu</a></li>
+ 
+        </ul>
+ 
+    </li>
+ 
+    <li id="two" class="mail">
+ 
+        <a href="#two">Mail</a>
+ 
+        <ul class="sub-menu">
+ 
+            <li><a href="#">Sub Menu</a></li>
+ 
+        </ul>
+ 
+    </li>
+ 
+    <li id="three" class="cloud">
+ 
+        <a href="#three">Cloud</a>
+ 
+        <ul class="sub-menu">
+ 
+            <li><a href="#">Sub Menu</a></li>
+ 
+        </ul>
+ 
+    </li>
+ 
+    <li id="four" class="sign">
+ 
+        <a href="#four">Sign Out</a>
+ 
+        <ul class="sub-menu">
+ 
+            <li><a href="#">Sub Menu</a></li>
+ 
+        </ul>
+ 
+    </li>
+ 
+</ul>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+ 
+    $(document).ready(function() {
+ 
+        // Store variables
+ 
+        var accordion_head = $('.accordion > li > a'),
+            accordion_body = $('.accordion li > .sub-menu');
+ 
+        // Open the first tab on load
+ 
+accordion_head.first().addClass('active').next().slideDown('normal');
+ 
+        // Click function
+ 
+        accordion_head.on('click', function(event) {
+ 
+            // Disable header links
+ 
+            event.preventDefault();
+ 
+            // Show and hide the tabs on click
+ 
+            if ($(this).attr('class') != 'active'){
+                accordion_body.slideUp('normal');
+                $(this).next().stop(true,true).slideToggle('normal');
+                accordion_head.removeClass('active');
+                $(this).addClass('active');
+            }
+ 
+        });
+ 
+    });
+ 
+</script>
+
+
+
+
+
 
   <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
 

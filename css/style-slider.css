@@ -218,76 +218,21 @@ td { vertical-align: top; }
    Author: @mira
    ========================================================================== */
 
-@mixin abstand {
-  margin: 10px 15px;
+body {
+  overflow: hidden;
+  width: 100%;
 }
-
-$hheight: auto;
-
-#header {
-  width: 80%;
-  height: $hheight;
-  background: #454;
-  h1 {
-    @include abstand;
-    font: {
-      size: ($hheight, 80%);
-      family: serif;
-    }
-  }
-
-  p { 
-    &:first-of-type{color: #eee;};
-    @include abstand;
-    color: #888;
-    font-size: ($hheight, 50%); 
-    a { 
-        color: red; 
-        font-decoration: none; 
-      &.extern { 
-        font-decoration: underline;
-        color: grey; }
-    }
-  }
-}
-
-#main-content {
-  @extend #header;
-}
-
-
-#verticalmenu {
-  color: #888;
-  width: 250px;
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  border: 1px solid #03F;
-  border-radius: 10px;
-}
-
-
-#verticalmenu a {
-  text-decoration: none;
-  display: block;
-}
-#verticalmenu ul {
-  list-style-type: none;
-}
-#verticalmenu ul li {
-  color: #03F;
-  display: block;
-}
-#verticalmenu ul li a {
-  color: #03F;
-  margin-left: -30px;
-  height: 20px;
-}
-#verticalmenu ul li a:hover {
-  color: #900;
-}
-
-
+ul { list-style-type: none; padding: 0; margin-left: 10px; position: fixed; }
+ul li { float: left; margin-right: 10px; }
+.clear { clear:both;}
+#content-wrapper {
+  padding-top: 10px; 
+  width: 400%; 
+  position: absolute; 
+  top: 30px;
+  left: 0; }
+.content { width: 25%; float: left; }
+p { padding: 10px;}
 
 
 
